@@ -1,6 +1,6 @@
 // Standard Vega-Lite embedding code
-var spec = "/js/vis.json";
-var spec2 = "/js/influenza.json";
+var spec = "js/vis.json";
+var spec2 = "js/influenza.json";
 
 vegaEmbed("#vis", spec, { "actions": false })
   .then(function (result) {
