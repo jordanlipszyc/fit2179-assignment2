@@ -7,7 +7,7 @@
   "layer": [
     {
       "data": {
-        "url": "tn",
+        "url": "data/test.topojson",
         "format": {
           "type": "topojson",
           "feature": "ne_50m_admin_1_states_provinces"
