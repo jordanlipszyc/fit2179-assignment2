@@ -148,7 +148,7 @@ export const choropleth = {
       "width": 900,
       "height": 100,
       "data": {
-        "url": "../data/influenza.csv",
+        "url": "data/influenza.csv",
         "format": { "type": "csv" }
       },
       "params": [
