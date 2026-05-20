@@ -145,31 +145,35 @@ export const choropleth = {
       ]
     },
     {
-      "width": 900,
-      "height": 100,
-      "data": {
-        "url": "data/influenza.csv",
-        "format": { "type": "csv" }
-      },
-      "params": [
+      layer: [
         {
-          "name": "brush",
-          "select": { "type": "interval", "encodings": ["x"] }
+          "width": 900,
+          "height": 100,
+          "data": {
+            "url": "data/influenza.csv",
+            "format": { "type": "csv" }
+          },
+          "params": [
+            {
+              "name": "brush",
+              "select": { "type": "interval", "encodings": ["x"] }
+            }
+          ],
+          "mark": "line",
+          "encoding": {
+            "x": {
+              "field": "Date",
+              "type": "temporal",
+              "timeUnit": "yearmonth",
+              "title": "Date"
+            },
+            "y": {
+              "aggregate": "count",
+              "title": "Total Cases"
+            }
+          }
         }
-      ],
-      "mark": "line",
-      "encoding": {
-        "x": {
-          "field": "Date",
-          "type": "temporal",
-          "timeUnit": "yearmonth",
-          "title": "Date"
-        },
-        "y": {
-          "aggregate": "count",
-          "title": "Total Cases"
-        }
-      }
+      ]
     }
   ]
 }
