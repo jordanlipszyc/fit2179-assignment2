@@ -39,7 +39,7 @@ export const choropleth = {
       "layer": [
         {
           "data": {
-            "url": "./data/test.topojson",
+            "url": "data/test.topojson",
             "format": {
               "type": "topojson",
               "feature": "ne_50m_admin_1_states_provinces"
@@ -55,7 +55,7 @@ export const choropleth = {
         },
         {
           "data": {
-            "url": "./data/influenza.csv",
+            "url": "data/influenza.csv",
             "format": { "type": "csv" }
           },
           "transform": [
@@ -102,7 +102,7 @@ export const choropleth = {
               "lookup": "StateFull",
               "from": {
                 "data": {
-                  "url": "./data/test.topojson",
+                  "url": "data/test.topojson",
                   "format": {
                     "type": "topojson",
                     "feature": "ne_50m_admin_1_states_provinces"

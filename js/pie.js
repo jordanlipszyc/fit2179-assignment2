@@ -1,6 +1,6 @@
 export const pie = {
     $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-    data: { url: "./data/influenza_age.csv", format: { type: "csv" } },
+    data: { url: "data/influenza_age.csv", format: { type: "csv" } },
 
     transform: [
         { aggregate: [{ op: "sum", field: "count", as: "total" }], groupby: ["Age group"] }

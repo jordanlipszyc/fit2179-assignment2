@@ -31,7 +31,7 @@ export const age = {
  
   layer: [
     {
-      data: { url: "./data/influenza_age.csv", format: { type: "csv" } },
+      data: { url: "data/influenza_age.csv", format: { type: "csv" } },
       transform: [
         { filter: "datum.year == yearFilter" },
         { calculate: "normalise ? datum.proportion : datum.count", as: "value" }
