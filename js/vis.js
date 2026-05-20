@@ -1,6 +1,7 @@
 // Import visualisation specificatoins as modules to keep this file clean and focused on rendering
 import { choropleth } from "./choropleth.js";
 import { graph2 } from "./graph2.js";
+import { age } from "./age.js";
 
 vegaEmbed("#choropleth", choropleth, { "actions": false })
   .then(function (result) {
@@ -8,14 +9,12 @@ vegaEmbed("#choropleth", choropleth, { "actions": false })
   })
   .catch(console.error);
 
-const el = document.getElementById('graph2');
-const parent = el.parentElement;
-const style = getComputedStyle(parent);
-const width = parent.offsetWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
-
-// Fix for hot-reloading causing graphs to not render when they use "params"
-if (window._vegaView) { window._vegaView.finalize(); window._vegaView = null; }
-
+var parent = document.getElementById('graph2').parentElement;
+var width = parent.offsetWidth;
 vegaEmbed("#graph2", { ...graph2, width: width }, { "actions": false, "theme": "dark" })
-  .then((result) => { window._vegaView = result.view; })
+  .catch(console.error);
+
+parent = document.getElementById('age').parentElement;
+width = parent.offsetWidth;
+vegaEmbed("#age", { ...age, width: width }, { "actions": false, "theme": "dark" })
   .catch(console.error);

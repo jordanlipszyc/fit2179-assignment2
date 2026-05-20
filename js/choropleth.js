@@ -1,6 +1,5 @@
 export const choropleth = {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Influenza Cases per 100,000 Population by State (2022)",
   width: parent.offsetWidth,
   autosize: { type: "fit", contains: "padding" },
   background: "transparent",

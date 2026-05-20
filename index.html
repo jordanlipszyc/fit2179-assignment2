@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
 
   <!-- <link rel="stylesheet" href="css/styles.css" /> -->
-  <link rel="stylesheet" href="css/styles_test.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 
   <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
@@ -17,39 +17,77 @@
 </head>
 
 <body>
+  <!-- Title -->
   <div class="pure-g">
     <div class="pure-u-1 header">
       <p class="eyebrow">Influenza in Australia</p>
       <h1>Influenza in <em>Australia</em></h1>
       <p class="subtitle">
-        Each line traces reported cases across the twelve months of a single year —<br>
-        revealing the characteristic southern-hemisphere winter surge (Jun–Aug).<br>
-        Hover a line to isolate a year. Points show individual weekly report aggregates.
+        A data visualisation for FIT2179 by Jordan Lipszyc
       </p>
     </div>
   </div>
 
+  <!-- Two Column Layout -->
   <div class="pure-g">
-
     <div class="pure-u-1-2">
-      <h2>Yearly Influenza Trends</h2>
+      <h2>1. The Winter Spike</h2>
     </div>
 
     <div class="pure-u-1-2">
-      <h2>Influenza Cases per 100,000 Population by State (2022)</h2>
+      <h2>2. The Big Picture</h2>
     </div>
 
     <div class="pure-u-1-2">
       <div id="graph2" class="vis"></div>
+      <div class="caption">
+        <p>
+          The line graph above shows the number of influenza cases reported in Australia each week from 2022 to 2025.
+          <br /> <br />
+          Each line represents a single year, with points indicating weekly report aggregates. The characteristic southern-hemisphere <span class="winter">winter surge</span> is evident, with peaks typically occurring between June and August.
+        </p>
+      </div>
     </div>
 
     <div class="pure-u-1-2">
       <div id="choropleth" class="vis"></div>
+      <div class="caption">
+        <p>Influenza Cases per 100,000 Population by State and Year</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two Column Layout -->
+  <div class="pure-g">
+    <div class="pure-u-1-2">
+      <h2>3. "In Your Prime"</h2>
+      <div id="age" class="vis"></div>
+      <div class="caption">
+        <p>
+          Age trend blah blah blah ...
+        </p>
+      </div>
     </div>
 
     <div class="pure-u-1-2">
-      <div id="text_div">
-        <h1>1. Section 1</h1>
+      <h2>4. Section 4</h2>
+      <div class="caption">
+        <p>
+          Lorem Ipsum dolor sit amet, is designed to help money-savy
+          travellers find the cheapest European cities and plan an accurate
+          budget for when they visit. <br />
+          <br />
+          Lorem Ipsum dolor sit amet
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two Column Layout -->
+  <div class="pure-g">
+    <div class="pure-u-1-2">
+      <h2>5. Section 5</h2>
+      <div class="caption">
         <p>
           Lorem Ipsum dolor sit amet, is designed to help money-savy
           travellers find the cheapest European cities and plan an accurate
@@ -61,8 +99,16 @@
     </div>
 
     <div class="pure-u-1-2">
-      <h1>2. Section 2</h1>
-      <div id="vis" class="vis-container"></div>
+      <h2>6. Section 6</h2>
+      <div class="caption">
+        <p>
+          Lorem Ipsum dolor sit amet, is designed to help money-savy
+          travellers find the cheapest European cities and plan an accurate
+          budget for when they visit. <br />
+          <br />
+          Lorem Ipsum dolor sit amet
+        </p>
+      </div>
     </div>
   </div>
 
