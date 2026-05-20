@@ -1,6 +1,7 @@
 html,
 body {
   background-color: #fffccb;
+  color: #3c1518;
 }
 
 .pure-u-1 img {
@@ -24,12 +25,10 @@ body {
 
 h1 {
   text-align: center;
-  color: #3c1518;
   font-size: 40px;
 }
 
 p {
-  color: #3c1518;
   font-size: 16px;
 }
 

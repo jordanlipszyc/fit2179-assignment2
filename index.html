@@ -1,62 +1,77 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>FIT2179 - Assignment 2</title>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
-      integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css"
-    />
+<head>
+  <title>FIT2179 - Data Visualisation 2</title>
 
-    <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+    integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-  </head>
+  <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+  <link rel="stylesheet" href="css/styles_test.css" />
 
-  <body>
-    <div class="pure-g">
-      <!-- Full-width div -->
-      <div class="pure-u-1">
-        <h1>Influenza in Australia</h1>
-      </div>
-      
-      <div class="pure-u-1">
-        <h2>Influenza Cases per 100,000 Population by State (2022)</h2>
-        <div class="pure-u-1-4"></div>
-        <div class="pure-u-1-2">
-          <div id="big-vis" class="vis-container"></div>
-        </div>
-        <div class="pure-u-1-4"></div>
-      </div>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+</head>
 
-      <div class="pure-u-1-2">
-        <div id="text_div">
-          <h1>1. Section 1</h1>
-          <p>
-            Lorem Ipsum dolor sit amet, is designed to help money-savy
-            travellers find the cheapest European cities and plan an accurate
-            budget for when they visit. <br />
-            <br />
-            Lorem Ipsum dolor sit amet
-          </p>
-        </div>
-      </div>
+<body>
+  <div class="pure-g">
+    <div class="pure-u-1 header">
+      <p class="eyebrow">Influenza in Australia</p>
+      <h1>Influenza in <em>Australia</em></h1>
+      <p class="subtitle">
+        Each line traces reported cases across the twelve months of a single year —<br>
+        revealing the characteristic southern-hemisphere winter surge (Jun–Aug).<br>
+        Hover a line to isolate a year. Points show individual weekly report aggregates.
+      </p>
+    </div>
+  </div>
 
-      <div class="pure-u-1-2">
-        <h1>2. Section 2</h1>
-        <div id="vis" class="vis-container"></div>
+  <div class="pure-g">
+
+    <div class="pure-u-1">
+      <h2>Yearly Influenza Trends</h2>
+    </div>
+
+    <div class="pure-u-1-4"></div>
+    <div class="pure-u-1-2">
+      <div id="graph2" class="vis"></div>
+    </div>
+    <div class="pure-u-1-4"></div>
+
+    <div class="pure-u-1">
+      <h2>Influenza Cases per 100,000 Population by State (2022)</h2>
+    </div>
+
+    <div class="pure-u-1-4"></div>
+    <div class="pure-u-1-2">
+      <div id="choropleth" class="vis"></div>
+    </div>
+    <div class="pure-u-1-4"></div>
+
+    <div class="pure-u-1-2">
+      <div id="text_div">
+        <h1>1. Section 1</h1>
+        <p>
+          Lorem Ipsum dolor sit amet, is designed to help money-savy
+          travellers find the cheapest European cities and plan an accurate
+          budget for when they visit. <br />
+          <br />
+          Lorem Ipsum dolor sit amet
+        </p>
       </div>
     </div>
 
-    <!-- Load the Vega-Lite visualiations at the end to ensure they render in the grid according to their CSS size -->
-    <script src="js/vis.js"></script>
-  </body>
+    <div class="pure-u-1-2">
+      <h1>2. Section 2</h1>
+      <div id="vis" class="vis-container"></div>
+    </div>
+  </div>
+
+  <!-- Load the Vega-Lite visualiations at the end to ensure they render in the grid according to their CSS size -->
+  <script type="module" src="js/vis.js"></script>
+</body>
+
 </html>

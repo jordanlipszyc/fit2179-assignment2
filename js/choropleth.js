@@ -1,6 +1,37 @@
-{
+export const choropleth = {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Influenza Cases per 100,000 Population by State (2022)",
+  width: parent.offsetWidth,
+  autosize: { type: "fit", contains: "padding" },
+  background: "transparent",
+  config: {
+    font: "'DM Mono', monospace",
+    title: {
+      color: "#b0a898",
+    },
+    axis: {
+      gridColor: "#1e2230",
+      domainColor: "#2a2d3a",
+      tickColor: "#2a2d3a",
+      labelColor: "#7a7567",
+      titleColor: "#b0a898",
+      labelFontSize: 11,
+      titleFontSize: 11,
+      titleFont: "'DM Mono', monospace",
+      labelFont: "'DM Mono', monospace"
+    },
+    legend: {
+      labelColor: "#b0a898",
+      titleColor: "#e8e2d5",
+      labelFontSize: 11,
+      titleFontSize: 11,
+      labelFont: "'DM Mono', monospace",
+      titleFont: "'DM Mono', monospace",
+      symbolStrokeWidth: 2.5,
+      padding: 8
+    },
+    view: { stroke: "transparent" }
+  },
   "vconcat": [
     {
       "width": 900,
