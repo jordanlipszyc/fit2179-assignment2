@@ -2,6 +2,7 @@
 import { choropleth } from "./choropleth.js";
 import { graph2 } from "./graph2.js";
 import { age } from "./age.js";
+import { pie } from "./pie.js";
 
 vegaEmbed("#choropleth", choropleth, { "actions": false })
   .then(function (result) {
@@ -17,4 +18,9 @@ vegaEmbed("#graph2", { ...graph2, width: width }, { "actions": false, "theme": "
 parent = document.getElementById('age').parentElement;
 width = parent.offsetWidth;
 vegaEmbed("#age", { ...age, width: width }, { "actions": false, "theme": "dark" })
+  .catch(console.error);
+
+parent = document.getElementById('pie').parentElement;
+width = parent.offsetWidth;
+vegaEmbed("#pie", { ...pie, width: width }, { "actions": false, "theme": "dark" })
   .catch(console.error);
