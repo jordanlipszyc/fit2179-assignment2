@@ -30,7 +30,7 @@ export const graph2 = {
     view: { stroke: "transparent" }
   },
 
-  data: { url: "../data/influenza.csv", format: { type: "csv" } },
+  data: { url: "./data/influenza.csv", format: { type: "csv" } },
 
   transform: [{
     calculate: "toDate(slice(datum.Date, 6, 10) + '-' + slice(datum.Date, 3, 5) + '-' + slice(datum.Date, 0, 2))",
