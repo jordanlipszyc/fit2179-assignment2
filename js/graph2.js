@@ -1,6 +1,7 @@
 export const graph2 = {
   $schema: "https://vega.github.io/schema/vega-lite/v5.json",
   width: parent.offsetWidth,
+  height: 400,
   autosize: { type: "fit", contains: "padding" },
   background: "transparent",
   config: {
@@ -39,6 +40,14 @@ export const graph2 = {
   layer: [
     // lines
     {
+      selection: {
+        yearHover: {
+          type: "single",
+          fields: ["year_DateISO"],
+          on: "mouseover",
+          empty: "all"
+        }
+      },
       mark: { type: "line", interpolate: "monotone", strokeWidth: 2 },
       encoding: {
         x: {
@@ -58,6 +67,10 @@ export const graph2 = {
           type: "ordinal",
           title: "Year",
           scale: { range: ["#e67e5a", "#c45fa0", "#5a8fe6", "#4ec9a0", "#f0c74a", "#a78bfa"] }
+        },
+        opacity: {
+          condition: { selection: "yearHover", value: 0.8 },
+          value: 0.2
         }
       }
     },
@@ -73,6 +86,10 @@ export const graph2 = {
           timeUnit: "year",
           type: "ordinal",
           scale: { range: ["#e67e5a", "#c45fa0", "#5a8fe6", "#4ec9a0", "#f0c74a", "#a78bfa"] }
+        },
+        opacity: {
+          condition: { selection: "yearHover", value: 0.8 },
+          value: 0.2
         },
         tooltip: [
           { field: "DateISO", timeUnit: "year", title: "Year" },
@@ -94,7 +111,10 @@ export const graph2 = {
           type: "ordinal",
           scale: { range: ["#e67e5a", "#c45fa0", "#5a8fe6", "#4ec9a0", "#f0c74a", "#a78bfa"] }
         },
-        opacity: { value: 0.08 }
+        opacity: {
+          condition: { selection: "yearHover", value: 0.1 },
+          value: 0.02
+        },
       }
     }
   ]
