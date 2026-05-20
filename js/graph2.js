@@ -1,6 +1,6 @@
 export const graph2 = {
   $schema: "https://vega.github.io/schema/vega-lite/v5.json",
-    width: parent.offsetWidth,
+  width: parent.offsetWidth,
   autosize: { type: "fit", contains: "padding" },
   background: "transparent",
   config: {
@@ -28,16 +28,16 @@ export const graph2 = {
     },
     view: { stroke: "transparent" }
   },
- 
+
   data: { url: "../data/influenza.csv", format: { type: "csv" } },
- 
+
   transform: [{
     calculate: "toDate(slice(datum.Date, 6, 10) + '-' + slice(datum.Date, 3, 5) + '-' + slice(datum.Date, 0, 2))",
     as: "DateISO"
   }],
- 
+
   layer: [
-    // ── lines ───────────────────────────────────────────────────────────
+    // lines
     {
       mark: { type: "line", interpolate: "monotone", strokeWidth: 2 },
       encoding: {
@@ -61,8 +61,8 @@ export const graph2 = {
         }
       }
     },
- 
-    // ── dots ────────────────────────────────────────────────────────────
+
+    // dots
     {
       mark: { type: "point", filled: true, size: 55, strokeWidth: 0 },
       encoding: {
@@ -75,14 +75,14 @@ export const graph2 = {
           scale: { range: ["#e67e5a", "#c45fa0", "#5a8fe6", "#4ec9a0", "#f0c74a", "#a78bfa"] }
         },
         tooltip: [
-          { field: "DateISO", timeUnit: "year",  title: "Year" },
+          { field: "DateISO", timeUnit: "year", title: "Year" },
           { field: "DateISO", timeUnit: "month", title: "Month", format: "%B" },
           { aggregate: "count", title: "Cases" }
         ]
       }
     },
- 
-    // ── faint area fill ─────────────────────────────────────────────────
+
+    // area background
     {
       mark: { type: "area", interpolate: "monotone", line: false },
       encoding: {
